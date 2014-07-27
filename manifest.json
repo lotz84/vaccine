@@ -1,0 +1,28 @@
+{
+  "name": "Vaccine",
+  "manifest_version": 2,
+  "version": "0.1",
+  "description": "You will never see viral media.",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://curazy.com/*"],
+      "js": ["lib/jquery.min.js", "media/curazy.js"]
+    },
+    {
+      "matches": ["http://dout.jp/*"],
+      "js": ["lib/jquery.min.js", "media/dropout.js"]
+    },
+    {
+      "matches": ["http://whats.be/*"],
+      "js": ["lib/jquery.min.js", "media/whats.js"]
+    },
+    {
+      "matches": ["http://gooddo.jp/*"],
+      "js": ["lib/jquery.min.js", "media/gooddo.js"]
+    }
+  ]
+}
